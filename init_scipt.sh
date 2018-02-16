@@ -33,4 +33,7 @@ cp node01.conf .env
 make up
 
 # Restart
-shutdown -r now
+#shutdown -r now
+
+# Show node status
+make ps
