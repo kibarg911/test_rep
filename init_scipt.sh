@@ -9,7 +9,7 @@ apt-get install ntp ntpdate -y
 
 cd /etc
 # Download NTP.CONF
-wget https://raw.githubusercontent.com/kibarg911/test_rep/master/ntp.conf
+wget https://raw.githubusercontent.com/kibarg911/test_rep/master/ntp.conf.new
 
 # Restart service
 systemctl restart ntp.service
