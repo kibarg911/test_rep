@@ -2,7 +2,6 @@
 
 # Initial Node script
 # Change path to node.conf for new node
-sudo -i
 
 # Configure NTP
 
