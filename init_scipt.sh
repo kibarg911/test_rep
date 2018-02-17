@@ -5,7 +5,7 @@
 
 # Configure NTP
 
-apt-get install ntp ntpdate -y
+apt-get install ntp ntpdate python-simplejson -y
 
 cd /etc
 # Download NTP.CONF
