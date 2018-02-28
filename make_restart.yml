@@ -1,0 +1,24 @@
+---
+- hosts: all
+  gather_facts: no
+  user: adminroot
+  become: yes
+  tasks: 
+    - name: Run make down to stop node
+      command: make down
+      args:
+        chdir: /root/chainpoint-node
+
+    - name: Run make up to start node
+      command: make up
+      args:
+        chdir: /root/chainpoint-node
+      
+    - name: Run make ps to check status
+      command: make ps
+      args:
+        chdir: /root/chainpoint-node
+      register: shell_result
+
+    - debug:
+        var: shell_result.stdout_lines
