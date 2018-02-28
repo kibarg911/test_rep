@@ -1,0 +1,16 @@
+---
+- hosts: new
+  gather_facts: no
+  user: adminroot
+  become: yes
+  tasks: 
+    - name: Download script
+      command: curl -sSL https://raw.githubusercontent.com/kibarg911/test_rep/master/init_scipt.sh
+      register: shell_result
+      
+    - name: Run script
+      script: init_scipt.sh
+      register: shell_result2
+
+    - debug:
+        var: shell_result.stdout_lines
