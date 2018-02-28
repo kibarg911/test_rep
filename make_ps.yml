@@ -1,0 +1,14 @@
+---
+- hosts: all
+  gather_facts: no
+  user: adminroot
+  sudo: yes
+  tasks: 
+    - name: Run make ps to check node status
+      command: make ps
+      args:
+        chdir: /root/chainpoint-node
+      register: shell_result
+
+    - debug:
+        var: shell_result.stdout_lines
