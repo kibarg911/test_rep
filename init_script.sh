@@ -25,9 +25,9 @@ curl -sSL https://cdn.rawgit.com/chainpoint/chainpoint-node/58a84a8822b8d79b1041
 
 # Download node configuration file
 cd ~/chainpoint-node
-wget https://raw.githubusercontent.com/kibarg911/test_rep/master/node_conf/node01.conf
+wget https://raw.githubusercontent.com/kibarg911/test_rep/master/node_conf/base.node.conf
 
-cp node01.conf .env
+cp base.node.conf .env
 
 # Start Node
 make up
